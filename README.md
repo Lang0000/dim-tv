@@ -4,7 +4,7 @@
 
 *A lightweight Apple TV–style launcher, an adb debloat list and diagnostics for the Xiaomi TV A 43 2025 (MiTV-MOOR2, Google TV / Android 11). No root, fully reversible. Docs are in Ukrainian.*
 
-![Головний екран «Дім»](docs/screenshots/home.png)
+![Головний екран «Дім»: перемикання між додатками, над панеллю змінюються добірки кожного додатка](docs/screenshots/home.gif)
 
 ## Що вийшло
 
@@ -114,3 +114,7 @@ docs/screenshots/      скріншоти
 - Іконки інтерфейсу: Material Icons (Google), Apache 2.0.
 
 Назви й логотипи додатків на скріншотах належать їхнім власникам.
+
+## Ліцензія
+
+Власний код і документація — [MIT](LICENSE). Сторонні шрифт, іконки й запозичений код — за їхніми ліцензіями, див. вище.
