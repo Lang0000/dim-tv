@@ -1,0 +1,11 @@
+# Raw adb dumps (getprop, dumpsys, logcat): they hold the TV's serial number, MAC and device IDs.
+# The write-ups live in docs/diagnostics/.
+diag/
+
+# Working screenshots; the curated ones live in docs/screenshots/.
+screens/
+update_screen.png
+
+.DS_Store
+*.apk
+.idea/

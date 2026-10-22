@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Дім</string>
+    <string name="home_service_label">Дім: кнопка Home</string>
+    <string name="clock_dream_label">Дім: годинник</string>
+    <string name="home_service_description">Кнопка Home на пульті відкриває лаунчер «Дім» замість Google TV. Служба реагує лише на кнопку Home і на появу головного екрана Google TV, нічого не читає і не передає.</string>
+</resources>
