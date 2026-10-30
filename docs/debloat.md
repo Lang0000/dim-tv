@@ -94,3 +94,16 @@ MemAvailable: 822 980 kB до вимкнення, 866 484 kB одразу піс
 ## Анімації — 2026-10-23
 
 `window_animation_scale`, `transition_animation_scale`, `animator_duration_scale`: 0.5 (було 1.0 / 1.0 / не задано). Повернути: `adb shell settings put global <ключ> 1`.
+
+## DNS, що блокує рекламу — 2026-10-30
+
+Private DNS (DNS-over-TLS, є в Android 11): `dns.adguard-dns.com`, стандартний фільтр AdGuard (реклама й трекери). Було: вимкнено, DNS роутера 192.168.31.1.
+
+```bash
+adb shell settings put global private_dns_specifier dns.adguard-dns.com
+adb shell settings put global private_dns_mode hostname
+```
+
+Перевірка: `dumpsys connectivity` показує `PrivateDnsServerName: dns.adguard-dns.com ValidatedPrivateDnsAddresses: [94.140.15.15,94.140.14.14]`. `doubleclick.net`, `googleads.g.doubleclick.net`, `api.ad.xiaomi.com`, `tracking.miui.com` тепер резолвляться в 127.0.0.1; `google.com`, `youtube.com`, `netflix.com` — як раніше.
+Рекламу YouTube DNS не прибирає: вона йде з тих самих доменів, що й відео.
+Якщо якийсь додаток перестане працювати або AdGuard буде недоступний (з `hostname` ТВ лишиться без DNS, а не перейде на роутер), повернути: `adb shell settings put global private_dns_mode opportunistic`.
